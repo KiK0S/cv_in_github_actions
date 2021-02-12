@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: build
-        uses: actions/action@v2
+        uses: ./
         id: cv
       - name: Measure time
         run: echo "The time was ${{ steps.build.outputs.time }}"
