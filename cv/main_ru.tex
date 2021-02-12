@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta, 
+    urlcolor=blue,
+}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Константин Амеличев} % Your name
+\address{(+7)9671295255 \\ kostya.amelichev@gmail.com} % Your phone number and email
+\address{\href{http://github.com/kik0s}{github: KiK0S} \\ \href{http://codeforces.com/profile/kikos}{codeforces: KiKoS}}
+
+\begin{document}
+
+\begin{rSection}{Образование}
+
+{\bf Высшая Школа Экономики, Москва} \hfill {\bf Сентябрь 2019 - Июнь 2023} \\ 
+Факультет компьютерных наук, ОП <<Прикладная математика и информатика>>.
+
+\end{rSection}
+
+\begin{rSection}{Учебные курсы}
+{\bf \href{http://github.com/kik0s/tink}{\underline{Tinkoff Generation}}} \hfill {\bf Сентябрь 2018 - Июнь 2019} \\
+Курсы для школьников по следующим направлениям: алгоритмы и структуры данных, машинное и глубокое обучение, олимпиадная математика.
+
+{\bf \href{http://github.com/it-church/rbtrf-2018}{\underline{Робототехника}}} \hfill {\bf Сентябрь 2015 - Май 2019} \\
+Курсы робототехники при школе 1540 (Arduino, dsPic). Разработка системы контроля и управления доступа в помещение, участие в международных и всероссийских соревнованиях
+\href{https://wroboto.ru/rules/robotraffic/}{\underline{Роботраффик}}.
+
+% {\bf Cisco IT Essentials} \hfill {\em Сентябрь 2016 - Май 2017} \\
+% Курсы системного администрирования.
+
+% {\bf Samsung IT School} \hfill {\em September 2016 - May 2017} \\
+% Курсы Java и разработки Android-приложений.
+\end{rSection}
+
+\begin{rSection}{Опыт работы}
+{\bf Tinkoff Поколение, Москва} \hfill {\bf Сентябрь 2019 - Настоящее время} \\ 
+Преподаватель курса алгоритмов и структур данных
+
+{\bf С-инновации, Москва} \hfill {\bf Ноябрь 2019 - Декабрь 2019} \\ 
+Заказной проект по прогнозированию результатов химических экспериментов на основе имеющихся экспериментальных данных.
+\end{rSection}
+
+\begin{rSection}{Проекты}
+{\bf \href{http://github.com/it-church/neworgshop}{\underline{Карта московских магазинов органической продукции}}} \hfill {\bf Осень 2016 - Весна 2017} \\
+Android приложение, показывающее пользователям сведения об органических магазинах. Технологии: Java, Yandex map API.  \\
+% {\bf \href{http://github.com/kik0s/spox}{\underline {Визуализатор логов}}} \\
+% Целью проекта было сделать десктоп-приложение для отображения данных с датчкиков. Использовал Java, Swing.
+{\bf \href{http://github.com/kik0s/dfvp}{\underline{Клиент-серверная игра}}}  \hfill {\bf Лето 2017} \\
+Разработка простой компьютерной клиент-серверной игры. Технологии: Python, pygame. \\
+{\bf \href{http://github.com/kik0s/codememes}{\underline {Codenames ИИ}}} \hfill {\bf Лето 2019} \\
+Разработка телеграм-бота для игры в Codenames. Технологии: Python, gensim Word2Vec, python-telegram-bot. \\
+{\bf \href{httpLdelo212.ru}{\underline{Телеграм-бот для delo212}}} \hfill {\bf Осень 2019} \\
+Бот для координации волонтеров проекта delo212.ru. Технологии: Python, python-telegram-bot. \\
+{\bf \href{http://covidarnost.ru}{\underline{Телеграм-бот для проекта COVIDарность}}} \hfill {\bf Настоящее время} \\
+Бот, который помогает создавать локальные сообщества для борьбы с коронавирусом. Технологии: Python, python-telegram-bot.
+\end{rSection}
+
+
+\begin{rSection}{Умения}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Языки программирования \ & Python, C++, Java\\
+Фреймворки \ & Pandas, Numpy, Sklearn, Pytorch, python-telegram-bot, Flask\\
+Инструменты \ & Git, Linux \\
+Языки \ & Английский (на уровне B2, без сертификата)
+\end{tabular}
+
+\end{rSection}
+
+\begin{rSection}{Достижения \& Награды} 
+    Победитель Всероссийской олимпиады школьников по информатике, 2019 \\
+    Победитель Открытой олимпиады школьников по программированию, 2019 \\
+    Бронзовая медаль Всероссийской командной олимпиады школьников по программированию, 2018
+\end{rSection}
+
+\end{document}
