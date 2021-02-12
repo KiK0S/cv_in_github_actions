@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  check-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Just hello world
+        run: echo Hello, world!
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: build
+        uses: actions/action@v2
+        id: cv
+      - name: Measure time
+        run: echo "The time was ${{ steps.build.outputs.time }}"
+     
