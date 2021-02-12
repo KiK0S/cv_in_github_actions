@@ -15,14 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Just hello world
-        run: echo Hello, world!
+        run:  echo Hello, world!
   build:
-    runs-on: ubuntu-latest
+    runs-on:  ubuntu-latest
 
     steps:
-      - name: build
-        uses: ./
-        id: cv
-      - name: Measure time
-        run: echo "The time was ${{ steps.build.outputs.time }}"
+     - uses:  actions/checkout@v
+     - name:  build
+       uses:  ./
+       id:    cv
+     - name:  Measure time
+       run:   echo "The time was ${{ steps.build.outputs.time }}"
      
