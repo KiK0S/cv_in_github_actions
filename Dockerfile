@@ -19,5 +19,6 @@ RUN apt-get -y install \
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
 COPY cv /usr/src/cv
+RUN chmod +x /usr/src/entrypoint.sh
 
 CMD ["/usr/src/entrypoint.sh"]
