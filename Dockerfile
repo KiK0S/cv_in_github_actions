@@ -1,21 +1,22 @@
-FROM ubuntu:latest
+FROM archlinux:latest
 
-RUN apt-get update && apt-get install -y locales && rm -rf /var/lib/apt/lists/* \
-    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-ENV LANG en_US.utf8
+RUN patched_glibc=glibc-linux4-2.33-4-x86_64.pkg.tar.zst && \
+    curl -LO "https://repo.archlinuxcn.org/x86_64/$patched_glibc" && \
+    bsdtar -C / -xvf "$patched_glibc"
+
+RUN pacman --version
+
+RUN chmod 777 /usr/bin/pacman && ldd /usr/bin/pacman && useradd -ms /bin/bash kikos -p password
+
+RUN pacman -Syyu --noconfirm && \
+	pacman -S --noconfirm binutils make gcc \
+	          fakeroot expac yajl\
+	          git expac yajl go base base-devel
 
 
-RUN ls
 
-RUN apt-get update && apt-get -y install software-properties-common && add-apt-repository universe
-RUN apt-get -y install \
-    texlive-base \
-    latexmk 
-
-RUN apt-get -y install \
-	texlive-pictures \
-	texlive-latex-extra \
-	texlive-latex-recommended
+RUN pacman -Sy --noconfirm\
+    texlive-most
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
 COPY cv /usr/src/cv
