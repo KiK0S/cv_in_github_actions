@@ -10,7 +10,7 @@ on:
 
 jobs:
   check-ci:
-    runs-on: ubuntu-latest
+    runs-on: archlinux-latest
 
     steps:
       - uses: actions/checkout@v2
