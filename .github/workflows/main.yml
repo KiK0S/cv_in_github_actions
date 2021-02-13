@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ arch ]
   pull_request:
     branches: [ main ]
 
@@ -10,7 +10,7 @@ on:
 
 jobs:
   check-ci:
-    runs-on: archlinux-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
